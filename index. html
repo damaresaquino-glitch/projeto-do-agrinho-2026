@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFuturo - Gestão Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌱 AgroFuturo</h1>
+            <p>Tecnologia Web para o Homem do Campo</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>💧 Simulador de Irrigação Inteligente</h2>
+            <p>Calcule a quantidade ideal de água para evitar desperdícios.</p>
+            
+            <div class="form-group">
+                <label for="cultura">Tipo de Cultura:</label>
+                <select id="cultura">
+                    <option value="soja">Soja (Necessidade Média)</option>
+                    <option value="milho">Milho (Necessidade Alta)</option>
+                    <option value="hortalicas">Hortaliças (Necessidade Baixa)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="area">Área do Plantio (em Hectares):</label>
+                <input type="number" id="area" placeholder="Ex: 10" min="1">
+            </div>
+
+            <button onclick="calcularIrrigacao()">Calcular Consumo Ideal</button>
+            <div id="resultadoIrrigacao" class="resultado"></div>
+        </section>
+
+        <section class="card">
+            <h2>🌳 Simulador de Créditos de Carbono</h2>
+            <p>Descubra o potencial de ganho financeiro mantendo áreas preservadas.</p>
+
+            <div class="form-group">
+                <label for="areaPreservada">Área de Floresta Preservada (Hectares):</label>
+                <input type="number" id="areaPreservada" placeholder="Ex: 5" min="1">
+            </div>
+
+            <button onclick="calcularCarbono()">Simular Ganhos</button>
+            <div id="resultadoCarbono" class="resultado"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Desenvolvido para o Concurso Agrinho 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
